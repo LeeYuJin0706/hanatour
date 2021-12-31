@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+ 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+}
+
+ body{
+    font-family: 'Noto Sans KR';
+ }
+
+ header{
+     width: 100%;
+     margin: 0 auto;
+ }
+
+.header-inner{
+    width: 1654px;
+    height: 132px;
+    margin: 0 auto;
+ }
+
+.header-inner .logo{
+     height: 132px;
+     font-size: 15px;
+     margin: 0 auto;
+     float: left;
+ }
+
+ .header-inner .logo img{
+    padding-top: 46px;
+ }
+
+.header-nav{
+    float: left;
+    margin: 0 auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 130px;
+}
+
+.header-nav li{
+    float: left;
+    width: 235px;
+    height: 128px;
+    text-align: center;
+    line-height: 125px;
+    font-size: 24px;
+}
+
+.header-nav li a{
+    color: #363636;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header-nav .bar{
+    width: 0%;
+    height: 4px;
+    background-color: #5E2BB8;
+    transition: 1s;
+}
+
+.header-nav li:hover .bar{
+    width: 100%;
+}
+
+.header-nav li a:hover{
+    color: #5E2BB8;
+    transition: 0.5s;
+}
+
+.nav-icon{
+    float: left;
+    height: 132px;
+    padding-top: 40px;
+}
+
+.nav-icon .language{
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-right: 34px;
+}
+
+.nav-icon .search{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+#main{
+    width: 100%;
+}
