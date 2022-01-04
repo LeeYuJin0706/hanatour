@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
- 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+:root{
+    --main-color: #5E2BB8;
+    --font-white: white;
+    --font-darkgray: #363636;
+}
+
 
 *{
     margin: 0;
@@ -33,6 +38,13 @@ img{
     margin: 0 auto;
  }
 
+.header-inner span{
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+ 
 .header-inner .logo{
      height: 132px;
      font-size: 15px;
@@ -41,7 +53,7 @@ img{
  }
 
  .header-inner .logo img{
-    padding-top: 46px;
+    padding-top: 48px;
  }
 
 .header-nav{
@@ -62,7 +74,7 @@ img{
 }
 
 .header-nav li a{
-    color: #363636;
+    color: var(--font-darkgray);
     display: block;
     width: 100%;
     height: 100%;
@@ -71,7 +83,7 @@ img{
 .header-nav .bar{
     width: 0%;
     height: 4px;
-    background-color: #5E2BB8;
+    background-color: var(--main-color);
     transition: 1s;
 }
 
@@ -80,14 +92,13 @@ img{
 }
 
 .header-nav li a:hover{
-    color: #5E2BB8;
+    color: var(--main-color);
     transition: 0.5s;
 }
 
 .nav-icon{
     float: left;
-    height: 132px;
-    padding-top: 40px;
+    padding-top: 45px;
 }
 
 .nav-icon .language{
@@ -104,5 +115,112 @@ img{
 }
 
 #main{
+    width: 1903px;
+    height: 880px;
+}
+
+.main-inner .newhana-text{
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    color: var(--font-white);
+}
+
+.main-inner .newhana-text h1{
+    font-size: 60px;
+}
+
+.main-inner .newhana-text p{
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+.dreams{
+    width: 1216px;
+    margin: 0 auto;
+    margin-top: 360px;
+}
+
+.dreams-title{
+    color: var(--font-darkgray);
+    width: 718px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.dreams-title h2{
+    color: var(--font-darkgray);
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+.dreams-title p{
+    color: var(--font-darkgray);
+    font-size: 32px;
+}
+
+.dreams-content{
+    width: 1216px;
+    height: 870px;
+    padding-top: 82px;
+}
+
+.dreams-content>div:nth-child(1){
+    width: 384px;
+    float: left;
+    margin-right: 32px;
+}
+
+.dreams-content>div:nth-child(2){
+    width: 384px;
+    float: left;
+    margin-right: 32px;
+}
+
+.dreams-content>div:nth-child(3){
+    width: 384px;
+    float: left;
+}
+
+.dreams-content>div>img{
+    width: 384px;
+    padding-bottom: 23px;
+}
+
+.dreams-content .content-title{
+    color: var(--font-darkgray);
+    font-size: 32px;
+    text-align: center;
+}
+
+.dreams-content .content-text{
+    color: var(--font-darkgray);
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cultural{
     width: 100%;
+    height: 1088px;
+}
+
+.cultural-inner{
+    position: relative;
+}
+
+.cultural-icon{
+    position: absolute;
+    left: 50%;
+    top: -8%;
+    transform: rotate(left -50%);
+}
+
+.cultural-content{
+    width: 900px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top:25%;
+    right: -16px;
 }
