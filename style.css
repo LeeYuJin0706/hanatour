@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
 :root{
     --main-color: #5E2BB8;
+    --sub-color: #08D1D9;
     --font-white: white;
     --font-darkgray: #363636;
+    --font-gray: #666666;
 }
 
 
@@ -223,4 +225,41 @@ img{
     position: absolute;
     top:25%;
     right: -16px;
+    text-align: center;
+}
+
+.cultural-content h2{
+    margin-top: 10%;
+    color: var(--font-darkgray);
+    font-size: 46px;
+}
+
+.cultural-content p{
+    padding-top: 20px;
+    color: var(--font-gray);
+    font-size: 32px;
+}
+
+.cultural-content button{
+    width: 300px;
+    height: 80px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    margin-top: 42px;
+}
+
+.cultural-content button:hover{
+    background-color: var(--sub-color);
+    transition: 0.3s;
+}
+
+.cultural-content button a{
+    display: block;
+    width: 300px;
+    height: 80px;
+    font-size: 24px;
+    color: var(--font-white);
+    line-height: 80px;
 }
