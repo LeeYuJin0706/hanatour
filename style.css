@@ -31,6 +31,7 @@ img{
 
  header{
      width: 100%;
+     height: 132px;
      margin: 0 auto;
  }
 
@@ -119,13 +120,15 @@ img{
 #main{
     width: 1903px;
     height: 880px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .main-inner .newhana-text{
     width: 750px;
     height: auto;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 15%;
     color: var(--font-white);
 }
@@ -373,8 +376,118 @@ img{
 }
 
 .peopleinfo{
-    width: 100%;
-    height: auto;
+    width: 1920px;
+    height: 1300px;
     margin-top: 360px;
+    margin: 0 auto;
 }
 
+.peopleinfo-inner{
+    position: relative;
+    width: 100;
+    height: 1300px;
+}
+
+.peopleinfo-icon{
+    position: absolute;
+    left: 50%;
+    top: -7%;
+    transform: rotate(left -50%);
+}
+
+.peopleinfo-title{
+    font-size: 60px;
+    color: var(--font-white);
+    position: absolute;
+    top: 15%;
+    left: 30%;
+}
+
+.peopleinfo-content{
+    width: 1008px;
+    height: 824px;
+    margin: 0 auto;
+    position: absolute;
+    top: 30%;
+    left: 24%;
+}
+
+.content-box{
+    width: 1008px;
+    height: 672px;
+}
+
+.content-box .servicemind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: left;
+}
+
+.content-box .promind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+}
+
+.content-box .global{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: left;
+    margin-top: 32px;
+}
+
+.content-box .digitalmind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+    margin-top: 32px;
+}
+
+
+.content-box .mini-title{
+    font-size: 46px;
+    color: var(--font-darkgray);
+    font-weight: 800;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.content-box .mini-text{
+    font-size: 32px;
+    color: var(--font-gray);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.peopleinfo-content .button{
+    width: 300px;
+    height: 80px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 72px;
+}
+
+.peopleinfo-content .button a{
+    color: var(--font-white);
+    width: 300px;
+    height: 80px;
+    display: block;
+}
+
+footer{
+    width: 1920px;
+    height: 412px;
+}
