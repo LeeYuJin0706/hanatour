@@ -2,6 +2,7 @@
 :root{
     --main-color: #5E2BB8;
     --sub-color: #08D1D9;
+    --icon-color:#cccccc;
     --font-white: white;
     --font-darkgray: #363636;
     --font-gray: #666666;
@@ -221,7 +222,7 @@ img{
     position: absolute;
     left: 50%;
     top: 19%;
-    transform: rotate(left -50%);
+    transform: translateX(-50%);
 }
 
 .foundation .imgbox{
@@ -251,27 +252,27 @@ img{
 }
 
 .foundation-content p{
-    padding-top: 20px;
+    padding: 20px 0px 42px 0px;
     color: var(--font-gray);
     font-size: 32px;
 }
 
-.foundation-content button{
+.foundation-content .button{
     width: 300px;
     height: 80px;
     background-color: var(--main-color);
     border: none;
     border-radius: 50px;
     font-size: 24px;
-    margin-top: 42px;
+    margin: 0 auto;
 }
 
-.foundation-content button:hover{
+.foundation-content .button:hover{
     background-color: var(--sub-color);
     transition: 0.3s;
 }
 
-.foundation-content button a{
+.foundation-content .button a{
     display: block;
     width: 300px;
     height: 80px;
@@ -282,7 +283,7 @@ img{
 
 .service{
     width: 100%;
-    height: 3170px;
+    height: 965px;
     margin-top: 360px;
 }
 
@@ -374,6 +375,7 @@ img{
     border-radius: 50px;
     font-size: 24px;
     margin-top: 42px;
+    text-align: center;
 }
 
 .service-but:hover{
@@ -393,7 +395,6 @@ img{
     width: 100%;
     height: 1300px;
     margin-top: 360px;
-    margin: 0 auto;
 }
 
 .peopleinfo-inner{
@@ -406,16 +407,18 @@ img{
     position: absolute;
     left: 50%;
     top: -7%;
-    transform:rotateX(-50%);
+    transform: translateX(-50%);
 }
 
 .peopleinfo-title{
     font-size: 60px;
+    width: 765px;
+    height: 82px;
     color: var(--font-white);
     position: absolute;
     top: 15%;
     left: 50%;
-    transform:rotateX(-50%);
+    transform: translateX(-50%);
 }
 
 .peopleinfo-content{
@@ -424,7 +427,7 @@ img{
     position: absolute;
     top: 30%;
     left: 50%;
-    transform: rotateX(-50%);
+    transform: translateX(-50%);
 }
 
 .peopleinfo_img{
@@ -475,7 +478,6 @@ img{
     margin-top: 32px;
 }
 
-
 .content-box .mini-title{
     font-size: 46px;
     color: var(--font-darkgray);
@@ -511,8 +513,131 @@ img{
     display: block;
 }
 
+.peopleinfo-content .button:hover{
+    background-color: var(--sub-color);
+    transition: 0.3s;
+}
+
 footer{
-    width: 1920px;
-    height: 412px;
-    background-color: #ccc;
+    width: 100%;
+    height: 350px;
+    margin-top: 200px;
+    background-color: white;
+    box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.footer-inner{
+    width: 1767px;
+    height: 165px;
+    margin: 0 auto;
+}
+
+.footer-inner .footertop{
+    padding-top: 100px;
+    width: 100%;
+    height: 53px;
+}
+
+.footertop .footer-logo{
+    width: 180px;
+    height: 36px;
+    float: left;
+}
+
+.footertop-icon li{
+    width: 52px;
+    height: 52px;
+    float: right;
+    margin-right: 36px;
+}
+
+.footertop-icon li a{
+    width: 52px;
+    height: 52px;
+    display: block;
+}
+
+.footertop-icon li a span{
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footertop-icon .facebook{
+    background-image: url(img/footericon-facebook.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .facebook:hover{
+    background-color: #3E5A9B;
+    transition: 0.3s;
+}
+
+.footertop-icon .instagram{
+    background-image: url(img/footericon-instagram.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .instagram:hover{
+    background-color: #CA2162;
+    transition: 0.3s;
+}
+
+.footertop-icon .blog{
+    background-image: url(img/footericon-blog.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .blog:hover{
+    background-color: #40C917;
+    transition: 0.3s;
+}
+
+.footertop-icon .kakaoplus{
+    background-image: url(img/footericon-kakaoplus.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .kakaoplus:hover{
+    background-color: #FBC011;
+    transition: 0.3s;
+}
+
+.footertop-icon .youtube{
+    background-image: url(img/footericon-youtube.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .youtube:hover{
+    background-color: #ED1F24;
+    transition: 0.3s;
+}
+
+.footertop-icon .kakaostory{
+    background-image: url(img/footericon-kakaostory.png);
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.footertop-icon .kakaostory:hover{
+    background-color: #FBC011;
+    transition: 0.3s;
 }
