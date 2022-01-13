@@ -125,6 +125,18 @@ img{
     position: relative;
 }
 
+.main-inner{
+    width: 100%;
+    height: 880px;
+}
+
+.main-inner .main-page01{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/main01.jpg);
+    background-repeat: no-repeat;
+}
+
 .main-inner .newhana-text{
     width: 750px;
     height: auto;
@@ -524,11 +536,12 @@ footer{
     margin-top: 200px;
     background-color: white;
     box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.05);
+    font-size: 18px;
 }
 
 .footer-inner{
-    width: 1767px;
-    height: 165px;
+    width: 90%;
+    height: auto;
     margin: 0 auto;
 }
 
@@ -542,12 +555,21 @@ footer{
     width: 180px;
     height: 36px;
     float: left;
+    margin-top: 10px;
+}
+
+.footertop-icon {
+    width: 492px;
+    float: right;
 }
 
 .footertop-icon li{
     width: 52px;
     height: 52px;
-    float: right;
+    float: left;
+}
+
+.footertop-icon li:not(:last-child){
     margin-right: 36px;
 }
 
@@ -640,4 +662,84 @@ footer{
 .footertop-icon .kakaostory:hover{
     background-color: #FBC011;
     transition: 0.3s;
+}
+
+.footermiddle{
+    width: 100%;
+    height: 25px;
+    padding-top: 45px;
+}
+    
+.footermiddle-left{
+    width: 650px;
+    height: 25px;
+    float: left;
+    color: var(--font-darkgray);
+}
+
+.footermiddle-left span{
+    position: relative;
+    padding-right: 20px;
+}
+
+.footermiddle-left span::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: var(--font-gray);
+    top: 7px;
+    right: 7px;
+}
+
+.footermiddle-left span:last-of-type::after{
+    width: 0px;
+    height: 0px;
+}
+
+.footermiddle-left span:last-of-type{
+    padding-right: 0px;
+}
+
+.footermiddle-right{
+    width: 250px;
+    height: 25px;
+    float: right;
+}
+
+.footermiddle-right a{
+    color: var(--font-darkgray);
+    position: relative;
+    padding-right: 20px;
+}
+
+.footermiddle-right a::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 14px;
+    background-color: var(--font-gray);
+    top: 6px;
+    left: 100px;
+}
+
+.footerbottom{
+    width: 100%;
+    height: 25px;
+    margin-top: 15px;
+}
+
+.footerbottom-info{
+    float: left;
+}
+
+.footerbottom-info span{
+    padding-right: 20px;
+    color: var(--font-darkgray);
+}
+
+.footerbottom .copy{
+    float: right;
+    color: var(--font-gray);
+    font-weight: 300;
 }
