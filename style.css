@@ -20,6 +20,7 @@ li{
 
 a{
     text-decoration: none;
+    color:var(--font-darkgray);
 }
 
 img{
@@ -119,7 +120,7 @@ img{
 }
 
 #main{
-    width: 1903px;
+    width: 100%;
     height: 880px;
     margin: 0 auto;
     position: relative;
@@ -128,13 +129,15 @@ img{
 .main-inner{
     width: 100%;
     height: 880px;
+    margin: 0 auto;
 }
 
 .main-inner .main-page01{
     width: 100%;
-    height: 100%;
+    height: 880px;
     background-image: url(img/main01.jpg);
-    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-inner .newhana-text{
@@ -157,6 +160,7 @@ img{
 
 .dreams{
     width: 1216px;
+    height: auto;
     margin: 0 auto;
     padding-top: 360px;
 }
@@ -183,7 +187,7 @@ img{
 
 .dreams-content{
     width: 1216px;
-    height: 870px;
+    height: 647px;
     padding-top: 82px;
 }
 
@@ -295,8 +299,8 @@ img{
 
 .service{
     width: 100%;
-    height: 965px;
-    margin-top: 360px;
+    height: auto;
+    padding-top: 360px;
 }
 
 .service-inner{
@@ -405,20 +409,20 @@ img{
 
 .peopleinfo{
     width: 100%;
-    height: 1300px;
-    margin-top: 360px;
+    height: auto;
+    padding-top: 360px;
 }
 
 .peopleinfo-inner{
     position: relative;
     width: 100%;
-    height: 1300px;
+    height: auto;
 }
 
 .peopleinfo-icon{
     position: absolute;
     left: 50%;
-    top: -7%;
+    top: -9%;
     transform: translateX(-50%);
 }
 
@@ -536,19 +540,19 @@ footer{
     margin-top: 200px;
     background-color: white;
     box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.05);
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .footer-inner{
-    width: 90%;
+    width: 1550px;
     height: auto;
     margin: 0 auto;
 }
 
 .footer-inner .footertop{
-    padding-top: 100px;
-    width: 100%;
-    height: 53px;
+    padding-top: 103px;
+    width: auto;
+    height: 52px;
 }
 
 .footertop .footer-logo{
@@ -558,7 +562,7 @@ footer{
     margin-top: 10px;
 }
 
-.footertop-icon {
+.footertop-icon{
     width: 492px;
     float: right;
 }
@@ -671,7 +675,7 @@ footer{
 }
     
 .footermiddle-left{
-    width: 628px;
+    width: auto;
     height: 25px;
     float: left;
     color: var(--font-darkgray);
@@ -702,46 +706,50 @@ footer{
 }
 
 .footermiddle-right{
-    width: 250px;
+    width: auto;
     height: 25px;
     float: right;
 }
 
-.footermiddle-right a{
-    color: var(--font-darkgray);
+.footermiddle-right span{
     position: relative;
     padding-right: 20px;
 }
 
-.footermiddle-right a::after{
+.footermiddle-right span::after{
     content: '';
     position: absolute;
     width: 1px;
     height: 15px;
     background-color: var(--font-gray);
     top: 7px;
-    right: 5px;
+    right: 7px;
 }
 
-/* .footermiddle-right a:last-of-type::after{
+.footermiddle-right span:last-of-type::after{
     width: 0px;
     height: 0px;
-} */
+}
+
+.footermiddle-right span:last-of-type{
+    padding-right: 0px;
+}
 
 .footerbottom{
     width: 100%;
     height: 25px;
-    padding-top: 15px;
+    padding-top: 8px;
 }
 
 .footerbottom-info{
     float: left;
-    position: relative;
+    color: var(--font-darkgray);
+    width: auto;
 }
 
 .footerbottom-info span{
     padding-right: 20px;
-    color: var(--font-darkgray);
+    position: relative;
 }
 
 .footerbottom-info span::after{
@@ -751,8 +759,17 @@ footer{
     height: 15px;
     background-color: var(--font-gray);
     top: 7px;
+    right: 7px;
 }
 
+.footerbottom-info span:last-of-type::after{
+    width: 0px;
+    height: 0px;
+}
+
+.footerbottom-info span:last-of-type{
+    padding-right: 0px;
+}
 
 .footerbottom .copy{
     float: right;
