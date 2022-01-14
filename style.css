@@ -671,7 +671,7 @@ footer{
 }
     
 .footermiddle-left{
-    width: 650px;
+    width: 628px;
     height: 25px;
     float: left;
     color: var(--font-darkgray);
@@ -717,26 +717,42 @@ footer{
     content: '';
     position: absolute;
     width: 1px;
-    height: 14px;
+    height: 15px;
     background-color: var(--font-gray);
-    top: 6px;
-    left: 100px;
+    top: 7px;
+    right: 5px;
 }
+
+/* .footermiddle-right a:last-of-type::after{
+    width: 0px;
+    height: 0px;
+} */
 
 .footerbottom{
     width: 100%;
     height: 25px;
-    margin-top: 15px;
+    padding-top: 15px;
 }
 
 .footerbottom-info{
     float: left;
+    position: relative;
 }
 
 .footerbottom-info span{
     padding-right: 20px;
     color: var(--font-darkgray);
 }
+
+.footerbottom-info span::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 15px;
+    background-color: var(--font-gray);
+    top: 7px;
+}
+
 
 .footerbottom .copy{
     float: right;
