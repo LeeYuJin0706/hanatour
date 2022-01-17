@@ -60,27 +60,21 @@
             <div class="main-inner">
                 <div class="main-slider">
                     <ul class="slider">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li><img src="img/main01.jpg" alt="main01"></li>
+                        <li><img src="img/main02.jpg" alt="main02"></li>
+                        <li><img src="img/main03.jpg" alt="main03"></li>
                     </ul>
                 </div>
-                <div class="main-page01">
-                </div>
-                <!--<div class="main-page02">
-                </div>
-                <div class="main-page03">
-                </div>-->
                <div class="newhana-text">
                     <h1>새로운 하나투어가 함께할게요</h1>
                     <p>하나투어와 함께 펼쳐가는 새로운 경험</p>
                 </div>
-                <!--<div class="left-but">
+                <div class="left-but">
                     <a href="#"><img src="img/slides_left.svg" alt=""></a>
                 </div>
                 <div class="rigth-but">
                     <a href="#"><img src="img/slides_rigth.svg" alt=""></a>
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -270,6 +264,16 @@
                 </div>
             </div>
         </footer>
-    </div>    
+    </div>
+    <script>
+        let index = 1;
+        let moveCheck = true;
+        const slider = document.querySelector('.slider');
+        const sliderContents = document.querySelector('.main-slider');
+        const sliderLength = sliderContents.lenght;
+
+        slider.appendChild(copyFirst);
+        slider.insertBefore(copylast, slider.firstElementChild);
+    </script>
 </body>
 </html>

@@ -132,12 +132,28 @@ img{
     margin: 0 auto;
 }
 
-.main-inner .main-page01{
+.main-slider{
     width: 100%;
     height: 880px;
-    background-image: url(img/main01.jpg);
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
+}
+
+.slider{
+    position: relative;
+    transform: translateX(0);
+    transition: all 1s;
+}
+
+.slider li{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.main-inner .slider li img{
+    width: 100%;
+    height: 880px;
 }
 
 .main-inner .newhana-text{
