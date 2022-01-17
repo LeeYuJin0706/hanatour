@@ -133,27 +133,44 @@ img{
 }
 
 .main-slider{
-    width: 100%;
+    width: 100vw;
     height: 880px;
+    position: relative;
     overflow: hidden;
 }
 
 .slider{
-    position: relative;
-    transform: translateX(0);
-    transition: all 1s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    transition: left 0.5s ease-out;
 }
 
 .slider li{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+    float: left;
 }
 
-.main-inner .slider li img{
-    width: 100%;
+.slider li img{
+    width: 100vw;
     height: 880px;
+    float: left;
+}
+
+.slider-btn{
+    width: 80px;
+    height: 80px;
+}
+
+.left-btn{
+    position: absolute;
+    top: 400px;
+}
+
+.rigth-btn{
+    position: absolute;
+    top: 400px;
+    right: 10px;
 }
 
 .main-inner .newhana-text{
