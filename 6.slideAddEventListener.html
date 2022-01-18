@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이더 연습</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        .wrapper{
+            width: 300px;
+            margin: 0 auto;
+        }
+        .slider{
+ 
+            width: 300px;
+            height: 150px;
+            overflow: hidden;
+        }
+        .slider-box{
+            /* width: 1200px; */
+            height: 150px;
+
+        }
+        .slide{
+            width:300px;
+            height:150px;
+            float: left;
+            font-size: 100px;
+            text-align: center;
+        }
+        .content1{
+            background-color: red;
+        }
+        .content2{
+            background-color: blue;
+        }
+        .content3{
+            background-color: pink;
+        }
+        .content4{
+            background-color: blueviolet;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .radio-container{
+            display: flex;
+        }
+        .round-button{
+            width: 10px;
+            height: 10px;
+            border: 2px solid gray;
+            border-radius: 50%;
+            margin : 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="slider">
+            <ul class="slider-box">
+                <li class="slide content1">1</li>
+                <li class="slide content2">2</li>
+                <li class="slide content3">3</li>
+                <li class="slide content4">4</li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <button onclick="slideToLeft()">이전</button>
+            <ul class=radio-container>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
+                <li class="round-button"></li>
+            </ul>
+            <button onclick="slideToRight()">다음</button>
+        </div>
+    </div>
+
+    <script>
+        let index=1;    // 현재 보여주고있는 슬라이드의 인덱스
+        let moveCheck=true;     //움직임이 완료 되었는가?
+        const sliderBox = document.querySelector('.slider-box');    //슬라이드를 감싸는 영역
+        const slideContents = document.querySelectorAll('.slide')   //슬라이드 컨텐츠 전체를 선택
+        const sliderLength = slideContents.length;                  //슬라이드 컨텐츠의 갯수
+
+        //노드 복사해주기
+        let copyFirst = sliderBox.firstElementChild.cloneNode(true);
+        let copylast = sliderBox.lastElementChild.cloneNode(true);
+
+        //복사한 노드 추가
+        sliderBox.appendChild(copyFirst);       //자식요소중 마지막으로 추가
+        sliderBox.insertBefore(copylast, sliderBox.firstElementChild);  //추가하되, 지정한 노드 앞에 추가
+
+        
+        sliderBox.style.width = 300 * (sliderLength+2) + "px";
+        //노드를 복사해서 앞에 한칸이 더 생겼으니 위의 index를 1로 바꿔, translate를 이용해 한칸 이동시켜줘야한다.
+        sliderBox.style.transform = "translateX(-" + 300*(index) +"px)";
+
+        //반복문을 이용해 버튼들에 이벤트 리스너 추가하기
+        let slideRoundButtons = document.querySelectorAll('.round-button');
+        for ( let i = 0 ; i < slideRoundButtons.length ; i ++ ){
+            slideRoundButtons[i].buttonIndex=i+1; // 버튼 눌렀을때 슬라이드 이동을 위한 인덱스 값
+            slideRoundButtons[i].addEventListener('click',buttonClick)
+        }
+
+        //첫번째 버튼 활성화 시키기
+        slideRoundButtons[index-1].style.backgroundColor='gray';
+
+        function buttonClick(){
+            if(moveCheck){
+                moveCheck=false;
+                clearButton();
+                this.style.backgroundColor="gray";
+                index = this.buttonIndex;
+                moveSlide(1000);
+                setTimeout(function(){
+                    moveCheck=true;
+                }, 1000);
+            }
+        }
+        //이전 버튼 누르면 작동
+        function slideToLeft(){
+            if(moveCheck){
+                moveCheck=false;
+
+                index--;
+                moveSlide(1000);
+                clearButton();
+
+                if(index>0)
+                    slideRoundButtons[index-1].style.backgroundColor='gray';
+                else
+                    slideRoundButtons[slideRoundButtons.length-1].style.backgroundColor='grey'
+
+                setTimeout(function(){
+                    if(index===0){
+                        index=sliderLength;
+                        moveSlide(0);
+                    }
+                    moveCheck=true;
+                }, 1000);
+            }
+        }
+        //다음 버튼 누르면 작동
+        function slideToRight(){
+            if(moveCheck){
+                moveCheck=false;
+
+                index++;
+                moveSlide(1000);
+                clearButton();
+
+                if(index<slideRoundButtons.length+1)
+                    slideRoundButtons[index-1].style.backgroundColor='gray';
+                else
+                    slideRoundButtons[0].style.backgroundColor='grey'
+                
+                setTimeout(function(){
+                    if(index===sliderLength+1){
+                        index=1;
+                        moveSlide(0);
+                    }
+                    
+                    moveCheck=true;
+                }, 1000);
+            }
+        }
+        //슬라이드 움직이는 함수
+        function moveSlide(time){
+            sliderBox.style.transition = time +'ms';
+            sliderBox.style.transform = "translateX(-" + 300*(index) +"px)";
+        }
+
+        //라디오버튼 지우는 함수
+        function clearButton(){
+            for(let i = 0 ; i < slideRoundButtons.length ; i++){
+                slideRoundButtons[i].style.backgroundColor='';
+            }
+
+        }
+    </script>
+</body>
+</html>
