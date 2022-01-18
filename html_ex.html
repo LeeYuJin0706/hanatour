@@ -17,32 +17,39 @@
         }
 
         .main-slider{
-            width: 1000vw;
+            width: 100vw;
             margin: 0 auto;
         }
 
         .slider{
-            width: 1000vw;
+            width: 100vw;
             height: 880px;
             overflow: hidden;
         }
 
         .slider-box{
             height: 880px;
+        }
+
+        .slide{
             position: relative;
-        }
-
-        .slider{
-            width: 1000vw;
-            height: 880px;
             float: left;
+            width: 100vw;
         }
 
-        .buttons{
+        .buttons div:nth-last-child(2){
             position: absolute;
+            top: 40%;
+            left: 3%;
+        }
+
+        .buttons div:nth-last-child(1){
+            position: absolute;
+            top: 40%;
+            right: 3%;
         }
         
-    </style>
+        </style>
 </head>
 <body>
     <div class="main-slider">
@@ -55,8 +62,8 @@
         </div>
     </div>
     <div class="buttons">
-        <button onclick="sideToLeft()"><img src="img/slides_left.svg" alt="왼쪽버튼"></button>
-        <button onclick="sideToRight()"><img src="img/slides_rigth.svg" alt="오른쪽버튼"></button>
+        <div onclick="slideToLeft()"><img src="img/slides_left.svg" alt="왼쪽버튼"></div>
+        <div onclick="slideToRight()"><img src="img/slides_rigth.svg" alt="오른쪽버튼"></div>
     </div>
     <script>
         let index = 1;
@@ -64,26 +71,59 @@
         const sliderBox = document.querySelector('.slider-box');
         const slideContents = document.querySelectorAll('.slide');
         const sliderLength = slideContents.length;
-
+        
         let copyFirst = sliderBox.firstElementChild.cloneNode(true);
         let copylast = sliderBox.lastElementChild.cloneNode(true);
-
-        sliderBox.style.width = 1000 * (sliderLength+2) + "vw";
-        sliderBox.style.transform = "translateX(-" + 1000*(index) + "vw)";
-
+        
+        sliderBox.appendChild(copyFirst);
+        sliderBox.insertBefore(copylast, sliderBox.firstElementChild);
+        
+        sliderBox.style.width = 100 * (sliderLength+2) + "vw";
+        sliderBox.style.transform = "translateX(-" + 100*(index) + "vw)";
+        
         function slideToLeft(){
+            console.log("왼쪽")
             if(moveCheck){
                 moveCheck = false;
-
+                
                 index--;
                 moveSlide(1000);
-                clearButton();
-
-                if(index > 0);
-                    slideRound    
+                
+                setTimeout(function(){
+                    if(index===0){
+                        index=sliderLength;
+                        moveSlide(0);
+                    }
+                    moveCheck=true;
+                }, 1000);
             }
         }
-
-    </script>
+        
+        function slideToRight(){
+            console.log("오른쪽")
+            if(moveCheck){
+                moveCheck=false;
+                
+                index++;
+                moveSlide(1000);
+                
+                setTimeout(function(){
+                    if(index===sliderLength+1){
+                        index=1;
+                        moveSlide(0);
+                    }
+                    
+                    moveCheck=true;
+                }, 1000);
+            }
+        }
+        
+        function moveSlide(time){
+            sliderBox.style.transition = time +'ms';
+            sliderBox.style.transform = "translateX(-" + 100*(index) +"vw)";
+        }
+        
+        
+        </script>
 </body>
 </html>

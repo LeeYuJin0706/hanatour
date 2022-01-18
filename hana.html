@@ -59,21 +59,22 @@
         <div id="main">
             <div class="main-inner">
                 <div class="main-slider">
-                    <ul class="slider">
-                        <li><img src="img/main01.jpg" alt="main01"></li>
-                        <li><img src="img/main02.jpg" alt="main02"></li>
-                        <li><img src="img/main03.jpg" alt="main03"></li>
-                    </ul>
+                    <div class="slider">
+                        <ul class="slider-box">
+                            <li class="slide content1"><img src="img/main01.jpg" alt="main01"></li>
+                            <li class="slide content2"><img src="img/main02.jpg" alt="main02"></li>
+                            <li class="slide content3"><img src="img/main03.jpg" alt="main03"></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="slider-btn">
-                    <a href="#" class="left-btn"><img src="img/slides_left.svg" alt=""></a>
-                    <a href="#" class="rigth-btn"><img src="img/slides_rigth.svg" alt=""></a>
+                <div class="buttons">
+                    <div onclick="slideToLeft()"><img src="img/slides_left.svg" alt="왼쪽버튼"></div>
+                    <div onclick="slideToRight()"><img src="img/slides_rigth.svg" alt="오른쪽버튼"></div>
                 </div>
                <div class="newhana-text">
                     <h1>새로운 하나투어가 함께할게요</h1>
                     <p>하나투어와 함께 펼쳐가는 새로운 경험</p>
-                </div>
-
+               </div>
             </div>
         </div>
 
@@ -264,25 +265,6 @@
             </div>
         </footer>
     </div>
-    <script>
-        let index = 1;
-        let moveCheck = true;
-        const slider = document.querySelector('.slider');
-        const sliderContents = document.querySelector('.main-slider');
-        const sliderLength = sliderContents.lenght;
-
-        let copyFirst = slider.firstElementChild.cloneNode(true);
-        let copylast = slider.lastElementChild.cloneNode(true);
-
-        slider.appendChild(copyFirst);
-        slider.insertBefore(copylast, slider.firstElementChild);
-
-        slider.style.width = 100 * (sliderLength+2) + "vw";
-        slider.style.transform = "translateX(-" + 100*(index)+"vw)";
-
-        const leftBtn = document.querySelector('left-btn');
-        const rigthBtn = document.querySelector('rigth-btn');
-
-    </script>
+    <script type="text/javascript" src="ex.js"></script>
 </body>
 </html>

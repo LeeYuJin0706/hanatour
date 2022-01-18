@@ -31,6 +31,11 @@ img{
     font-family: 'Noto Sans KR';
  }
 
+.warp{
+     width: 100%;
+     margin: 0 auto;
+ }
+
  header{
      width: 100%;
      height: 132px;
@@ -134,48 +139,40 @@ img{
 
 .main-slider{
     width: 100vw;
-    height: 880px;
-    position: relative;
-    overflow: hidden;
+    margin: 0 auto;
 }
 
 .slider{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    transition: left 0.5s ease-out;
-}
-
-.slider li{
-    float: left;
-}
-
-.slider li img{
     width: 100vw;
     height: 880px;
+    overflow: hidden;
+}
+
+.slider-box{
+    height: 880px;
+}
+
+.slide{
+    position: relative;
     float: left;
+    width: 100vw;
 }
 
-.slider-btn{
-    width: 80px;
-    height: 80px;
-}
-
-.left-btn{
+.buttons div:nth-last-child(2){
     position: absolute;
-    top: 400px;
+    top: 45%;
+    left: 3%;
+    cursor: pointer;
 }
 
-.rigth-btn{
+.buttons div:nth-last-child(1){
     position: absolute;
-    top: 400px;
-    right: 10px;
+    top: 45%;
+    right: 3%;
+    cursor: pointer;
 }
 
 .main-inner .newhana-text{
-    width: 750px;
-    height: auto;
     position: absolute;
     top: 40%;
     left: 15%;
@@ -461,8 +458,6 @@ img{
 
 .peopleinfo-title{
     font-size: 60px;
-    width: 765px;
-    height: 82px;
     color: var(--font-white);
     position: absolute;
     top: 15%;
@@ -570,7 +565,7 @@ img{
 footer{
     width: 100%;
     height: 350px;
-    margin-top: 200px;
+    margin-top: 400px;
     background-color: white;
     box-shadow: 0px -6px 12px rgba(0, 0, 0, 0.05);
     font-size: 16px;
