@@ -221,11 +221,44 @@ img{
     padding-top: 82px;
 }
 
-.dreams-content>div:nth-child(1){
-    width: 384px;
+.travel{
     float: left;
     margin-right: 32px;
+    cursor: pointer;
 }
+
+.travel .travel-inner{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.0);
+    transition: 1s;
+}
+
+.travel .travel-inner:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.travel-img{
+    background-image: url(img/travel.jpg);
+    height: 480px;
+    margin-bottom: 20px;
+}
+
+.travel-img .blackbox{
+    background-color:black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.travel:hover .blackbox{
+    opacity: 0;
+    transition: 1s;
+}
+
 
 .dreams-content>div:nth-child(2){
     width: 384px;
@@ -253,7 +286,7 @@ img{
     color: var(--font-darkgray);
     font-size: 18px;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .foundation{
@@ -383,7 +416,7 @@ img{
 }
 
 .hanapack-page{
-    width: 1800px;
+    width: 100%;
     height: 640px;
     padding-top: 44px;
 }
@@ -398,7 +431,7 @@ img{
 .hanapack-page .hanapack-content{
     float: left;
     text-align: left;
-    padding-top: 100px;
+    padding-top: 150px;
     margin-left: 104px;
 }
 
