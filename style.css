@@ -216,9 +216,10 @@ img{
 }
 
 .dreams-content{
-    width: 1216px;
-    height: 647px;
+    width: 100%;
+    height: 640px;
     padding-top: 82px;
+    margin: 0 auto;
 }
 
 .dreams-item{
@@ -226,6 +227,10 @@ img{
     margin-right: 32px;
     cursor: pointer;
     width: 384px;
+}
+
+.dreams-item:nth-child(3){
+    margin-right: 0px;
 }
 
 .item-inner{
@@ -245,7 +250,7 @@ img{
     background-color:black;
     width: 100%;
     height: 100%;
-    opacity: 0.3;
+    opacity: 0.5;
     transition: 1s;
 }
 
@@ -366,13 +371,6 @@ img{
 .service-inner{
     width: 100%;
     height: auto;
-}
-
-.service-title{
-    color: var(--font-darkgray);
-    width: 542px;
-    text-align: center;
-    margin: 0 auto;
 }
 
 .tap-manu{
