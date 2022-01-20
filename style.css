@@ -221,13 +221,14 @@ img{
     padding-top: 82px;
 }
 
-.travel{
+.dreams-item{
     float: left;
     margin-right: 32px;
     cursor: pointer;
+    width: 384px;
 }
 
-.travel .travel-inner{
+.item-inner{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -235,8 +236,21 @@ img{
     transition: 1s;
 }
 
-.travel .travel-inner:hover{
+.item-inner:hover{
     transform: scale(1.1);
+    transition: 1s;
+}
+
+.blackbox{
+    background-color:black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    transition: 1s;
+}
+
+.blackbox:hover{
+    opacity: 0;
     transition: 1s;
 }
 
@@ -246,34 +260,17 @@ img{
     margin-bottom: 20px;
 }
 
-.travel-img .blackbox{
-    background-color:black;
-    width: 100%;
-    height: 100%;
-    opacity: 0.3;
-    transition: 1s;
-}
-
-.travel:hover .blackbox{
-    opacity: 0;
-    transition: 1s;
+.culture-img{
+    background-image: url(img/culture.jpg);
+    height: 480px;
+    margin-bottom: 20px;
 }
 
 
-.dreams-content>div:nth-child(2){
-    width: 384px;
-    float: left;
-    margin-right: 32px;
-}
-
-.dreams-content>div:nth-child(3){
-    width: 384px;
-    float: left;
-}
-
-.dreams-content>div>img{
-    width: 384px;
-    padding-bottom: 23px;
+.happiness-img{
+    background-image: url(img/happiness.jpg);
+    height: 480px;
+    margin-bottom: 20px;
 }
 
 .dreams-content .content-title{
