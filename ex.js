@@ -14,7 +14,6 @@ sliderBox.style.width = 100 * (sliderLength+2) + "vw";
 sliderBox.style.transform = "translateX(-" + 100*(index) + "vw)";
 
 
-
 function slideToLeft(){
     console.log("왼쪽")
     if(moveCheck){
@@ -53,8 +52,20 @@ function slideToRight(){
         }, 1000);
     }
 }
-
 function moveSlide(time){
     sliderBox.style.transition = time +'ms';
     sliderBox.style.transform = "translateX(-" + 100*(index) +"vw)";
+}
+
+const tapList = document.querySelectorAll('.page');
+const tapButton = document.querySelectorAll('.tap-menu ul li');
+
+for(let i = 0; i < tapButton.length; i++){
+    tapButton[i].addEventListener('click', function(e){
+        e.preventDefault();
+        for(let j = 0; j < tapList.length; j++){
+            tapList[j].classList.remove('active');
+        }
+        tapList[i].classList.add('active');
+    })
 }

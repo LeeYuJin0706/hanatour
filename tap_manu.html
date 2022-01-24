@@ -43,11 +43,6 @@
             padding-top: 360px;
         }
 
-        .service-inner{
-            width: 100%;
-            height: auto;
-        }
-
         .tap-manu{
             width: 1206px;
             height: 80px;
@@ -100,9 +95,9 @@
         
         .active{
             opacity: 1;
-            z-index: 9999;
-            
+            z-index: 10;
         }
+
         .page-img{
             width: 1080px;
             height: 640px;
@@ -158,19 +153,20 @@
         <div class="service-inner">
             <h2 class="main-title">Travel service</h2>
             <p class="sub-title">꿈꾸는 여행자들을 위한 여행 상품 브랜드</p>
+            
             <div class="tap-manu">
                 <ul>
-                    <li class="manu01"><a href="#">하나팩</a></li>
-                    <li class="manu02"><a href="#">하나 Free</a></li>
-                    <li class="manu03"><a href="#">Zeus World</a></li>
-                    <li class="manu04"><a href="#">내 나라 여행</a></li>
+                    <li><a href="#">하나팩</a></li>
+                    <li><a href="#">하나 Free</a></li>
+                    <li><a href="#">Zeus World</a></li>
+                    <li><a href="#">내 나라 여행</a></li>
                 </ul>
             </div>
+            
             <div class="container">
-
                 <div class="page active">
                     <img class="page-img" src="img/hanapack.jpg" alt="하나팩">
-                    <div class="hanapack-content">
+                    <div class="page-content">
                         <h3>하나투어 대표 여행 브랜드</h3>
                         <p>
                             일반 기획 여행과 함께 허니문, 골프, 크루즈, 힐링,
@@ -183,7 +179,7 @@
                 
                 <div class="page">
                     <img class="page-img" src="img/hanafree.jpg" alt="하나free">
-                    <div class="hanapack-content">
+                    <div class="page-content">
                         <h3>자유 여행 브랜드</h3>
                         <p>
                             항공, 숙박, 현지 투어 및 다양한 자유 여행 상품으로
@@ -196,7 +192,7 @@
                 
                 <div class="page">
                     <img class="page-img" src="img/zous world.jpg" alt="zousworld">
-                    <div class="hanapack-content">
+                    <div class="page-content">
                         <h3>럭셔리 여행 브랜드</h3>
                         <p>
                             상위 1%를 위한 단독 맞춤 여행을 제공하고 있는
@@ -208,7 +204,7 @@
                 
                 <div class="page">
                     <img class="page-img" src="img/country.jpg" alt="country">
-                    <div class="hanapack-content">
+                    <div class="page-content">
                         <h3>국내 여행 브랜드</h3>
                         <p>
                             프리미엄 국내 여행 브랜드로 전국 특급 호텔 숙박과 
@@ -216,17 +212,26 @@
                             <br>국내 최장의 내나라 여행 전용 버스 등
                             <br>최상의 여행 서비스를 제공합니다.
                         </p>
-                        <div class="service-but">
-                            <a href="#">내 나라 여행 보러가기</a>
-                        </div>
+                        <div class="service-but"><a href="#">내 나라 여행 보러가기</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-            
-            
+        const tapList = document.querySelectorAll('.page');
+        const tapbutton = document.querySelectorAll('.tap-manu ul li');
+
+        for(let i = 0; i < tapbutton.length; i++){
+            tapbutton[i].addEventListener('click', function(e){
+                e.preventDefault();
+                for(let j = 0; j < tapList.length; j++){
+                    tapList[j].classList.remove('active');
+                }
+                tapList[i].classList.add('active');
+            })
+        }
+
     </script>
 </body>
 </html>
