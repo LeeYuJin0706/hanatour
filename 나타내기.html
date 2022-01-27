@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+
+        li{
+            list-style: none;
+        }
+
+        a{
+            text-decoration: none;
+            color:var(--font-darkgray);
+        }
+
+        img{
+            display: block;
+        }
+
+        body{
+            font-family: 'Noto Sans KR';
+        }
+
+        .warp{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .main-title{
+            color: var(--font-darkgray);
+            font-size: 60px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .sub-title{
+            color: var(--font-gray);
+            font-size: 32px;
+            text-align: center;
+        }
+
+
+.peopleinfo{
+    width: 100%;
+    height: 1200px;
+    padding-top: 360px;
+    position: relative;
+}
+
+.peopleinfo-icon{
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%);
+}
+
+.peopleinfo-title{
+    font-size: 60px;
+    color: var(--font-white);
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.peopleinfo-content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.peopleinfo_img{
+    width: 100%;
+    height: 800px;
+    background-image: url(img/peopleinfo_img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.content-box{
+    width: 1008px;
+    height: 672px;
+    position: relative;
+}
+
+.content-box .servicemind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: left;
+}
+
+.content-box .promind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+}
+
+.content-box .global{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: left;
+    margin-top: 32px;
+}
+
+.content-box .digitalmind{
+    width: 488px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    float: right;
+    margin-top: 32px;
+}
+
+.content-box .mini-title{
+    font-size: 46px;
+    color: var(--font-darkgray);
+    font-weight: 800;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.content-box .mini-text{
+    font-size: 32px;
+    color: var(--font-gray);
+    text-align: center;
+    padding-top: 15px;
+}
+
+.peopleinfo-content .button{
+    width: 300px;
+    height: 80px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 72px;
+}
+
+.peopleinfo-content .button a{
+    color: var(--font-white);
+    width: 300px;
+    height: 80px;
+    display: block;
+}
+
+.peopleinfo-content .button:hover{
+    background-color: var(--sub-color);
+    transition: 0.3s;
+}
+
+.video-box{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-box video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+    </style>
+</head>
+<body>
+    <div class="peopleinfo">
+        <img class="peopleinfo-icon" src="img/peopleinfo_icon.png" alt="인사정보 아이콘">
+        <div class="peopleinfo_img"></div>
+        <h2 class="peopleinfo-title">스스로 비전을 창조하는 하나인</h2>
+        <div class="peopleinfo-content">
+            <div class="content-box">
+                
+                <div class="servicemind">
+                    <a href="#">
+                        <p class="mini-title">서비스 마인드</p>
+                        <p class="mini-text">'고객 가치 창출' 서비스맨</p>
+                    </a>
+                    <div class="video-box">
+                        <video autoplay loop src="img/servicemind.mp4" alt="">
+                    </div>
+                </div>
+
+                <div class="promind">
+                    <p class="mini-title">프로 의식</p>
+                    <p class="mini-text">'스스로의 변화' 변화인</p>
+                    <div class="video-box">
+                        <video autoplay loop src="img/promind.mp4" alt="">
+                    </div>
+                </div>
+
+                <div class="global">
+                    <p class="mini-title">글로벌 역량</p>
+                    <p class="mini-text">'미래 창조' 창조인</p>
+                </div>
+                
+                <div class="digitalmind">
+                    <p class="mini-title">디지털 마인드</p>
+                    <p class="mini-text">'끊임없는 배움' 학습인</p>
+                </div>
+            </div>
+            <div class="button"><a href="#">채용공고 보러가기</a></div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
