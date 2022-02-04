@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="KR">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>비디오</title>
 <style>
+
 *{
-margin: 0;
-padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 li{
@@ -46,6 +47,7 @@ body{
     text-align: center;
 }
 
+/************************************************************/
 
 .peopleinfo{
     width: 100%;
@@ -70,13 +72,6 @@ body{
     transform: translateX(-50%);
 }
 
-.peopleinfo-content{
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .peopleinfo_img{
     width: 100%;
     height: 800px;
@@ -87,9 +82,17 @@ body{
     background-attachment: fixed; 
 }
 
+.peopleinfo-content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .content-box{
     width: 1008px;
     height: 672px;
+    position: relative;
 }
 
 .content-box .mini-title{
@@ -112,71 +115,74 @@ body{
     height: 320px;
     background-color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.video-box video{
-    width: 1008px;
-    height: 672px;
-    object-fit: cover;
-}
-
-.content-box .servicemind{
-    float: left;
-    position: relative;
     cursor: pointer;
+    float: left;
 }
 
-.content-box .servicemind:hover{
+.content-box>div:hover{
     color: #5E2BB8;
+    /* color: var(--main-color); */
+}
+
+.content-box>div:nth-child(even){
+    margin-left: 32px;
+}
+
+.content-box .con-bottom{
+    margin-top: 32px;
 }
 
 .video-background{
     background-color: white;
     width: 0;
     height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
     transition: 1s;
+    position: absolute;
 }
 
-.content-box .servicemind:hover .video-background{
+.content-box>div:hover .video-background{
     width: 1008px;
     height: 672px;
 }
 
-.video-box{
-    width: 100%;
-    height: 100%;
+.servicemind .video-background{
+    top: 0;
+    left: 0;
+}
+
+.promind .video-background{
+    top: 0;
+    right: 0;
+}
+
+.global .video-background{
+    bottom: 0;
+    left: 0;
+}
+
+.digitalmind .video-background{
+    bottom: 0;
+    right: 0;
+}
+
+.content-box video{
+    width: 1008px;
+    height: 672px;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
-    transition-duration: 0s;
     opacity: 0;
     overflow: hidden;
+    z-index: -1;
 }
 
-.servicemind:hover .video-box{
+.content-box>div:hover video{
     transition: 0.5s;
     opacity: 1;
     transition-delay: 0.8s;
     overflow: visible;
-}
-
-
-.content-box .promind{
-    float: right;
-}
-
-.content-box .global{
-    float: left;
-    margin-top: 32px;
-}
-
-.content-box .digitalmind{
-    float: right;
-    margin-top: 32px;
+    z-index: 0;
 }
 
 .peopleinfo-content .button{
@@ -215,53 +221,44 @@ body{
         <h2 class="peopleinfo-title">스스로 비전을 창조하는 하나인</h2>
         <div class="peopleinfo-content">
             <div class="content-box">
-                
                 <div class="servicemind">
-                    <a href="#">
-                        <p class="mini-title">서비스 마인드</p>
-                        <p class="mini-text">'고객 가치 창출' 서비스맨</p>
-                    </a>
+                    <p class="mini-title">서비스 마인드</p>
+                    <p class="mini-text">'고객 가치 창출' 서비스맨</p>
                     <div class="video-background"></div>
-                    <div class="video-box">
-                        <video id="hz" autoplay loop src="img/servicemind.mp4" alt="">
-                    </div>
+                    <video autoplay loop>
+                        <source src="img/servicemind.mp4" type="video/mp4">
+                    </video>
                 </div>
 
                 <div class="promind">
                     <p class="mini-title">프로 의식</p>
                     <p class="mini-text">'스스로의 변화' 변화인</p>
+                    <div class="video-background"></div>
+                    <video autoplay loop>
+                        <source src="img/promind.mp4" type="video/mp4">
+                    </video>
                 </div>
 
-                <div class="global">
+                <div class="global con-bottom">
                     <p class="mini-title">글로벌 역량</p>
                     <p class="mini-text">'미래 창조' 창조인</p>
+                    <div class="video-background"></div>
+                    <video autoplay loop>
+                        <source src="img/global_2.mp4" type="video/mp4">
+                    </video>
                 </div>
                 
-                <div class="digitalmind">
+                <div class="digitalmind con-bottom">
                     <p class="mini-title">디지털 마인드</p>
                     <p class="mini-text">'끊임없는 배움' 학습인</p>
+                    <div class="video-background"></div>
+                    <video autoplay loop>
+                        <source src="img/digitalmind.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
             <div class="button"><a href="#">채용공고 보러가기</a></div>
         </div>
     </div>
-    <script>
-       
-        var hz = document.getElementById("hz");
-        play = document.getElementsByClassName("servicemind");
-
-        play.addEventListener('click', playVideo);
-        // play.addEventListener('mouseout', pauseVideo);
-
-        function playVideo(){
-            hz.play();
-            console.log('11111');
-        }
-
-        function pauseVideo(){
-            hz.pause();
-        }
-
-    </script>
 </body>
 </html>
