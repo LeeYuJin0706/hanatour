@@ -248,10 +248,10 @@ img{
 }
 
 .blackbox{
-    background-color:black;
+    background-color:white;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
+    opacity: 0.4;
     transition: 1s;
 }
 
@@ -545,9 +545,8 @@ img{
     float: left;
 }
 
-.content-box>div:hover{
-    color: #5E2BB8;
-    /* color: var(--main-color); */
+.content-box>div:hover p{
+    color: var(--main-color);
 }
 
 .content-box>div:nth-child(even){
@@ -653,19 +652,15 @@ footer{
 
 .footer-inner .footertop{
     padding-top: 103px;
-    width: auto;
     height: 52px;
 }
 
 .footertop .footer-logo{
-    width: 180px;
-    height: 36px;
     float: left;
     margin-top: 10px;
 }
 
 .footertop-icon{
-    width: 492px;
     float: right;
 }
 
@@ -673,16 +668,15 @@ footer{
     width: 52px;
     height: 52px;
     float: left;
+    background-color: var(--icon-color);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+    cursor: pointer;
 }
 
 .footertop-icon li:not(:last-child){
     margin-right: 36px;
-}
-
-.footertop-icon li a{
-    width: 52px;
-    height: 52px;
-    display: block;
 }
 
 .footertop-icon li a span{
@@ -694,10 +688,6 @@ footer{
 
 .footertop-icon .facebook{
     background-image: url(img/footericon-facebook.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .facebook:hover{
@@ -707,10 +697,6 @@ footer{
 
 .footertop-icon .instagram{
     background-image: url(img/footericon-instagram.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .instagram:hover{
@@ -720,10 +706,6 @@ footer{
 
 .footertop-icon .blog{
     background-image: url(img/footericon-blog.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .blog:hover{
@@ -733,10 +715,6 @@ footer{
 
 .footertop-icon .kakaoplus{
     background-image: url(img/footericon-kakaoplus.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .kakaoplus:hover{
@@ -746,10 +724,6 @@ footer{
 
 .footertop-icon .youtube{
     background-image: url(img/footericon-youtube.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .youtube:hover{
@@ -759,10 +733,6 @@ footer{
 
 .footertop-icon .kakaostory{
     background-image: url(img/footericon-kakaostory.png);
-    background-color: var(--icon-color);
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    background-position: center;
 }
 
 .footertop-icon .kakaostory:hover{
@@ -777,8 +747,6 @@ footer{
 }
     
 .footermiddle-left{
-    width: auto;
-    height: 25px;
     float: left;
     color: var(--font-darkgray);
 }

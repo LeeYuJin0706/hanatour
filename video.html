@@ -248,14 +248,12 @@ body{
     <script>
        
         var hz = document.getElementById("hz");
-        play = document.getElementsByClassName("servicemind");
+        var play = document.getElementsByClassName("servicemind");
 
         play.addEventListener('click', playVideo);
-        // play.addEventListener('mouseout', pauseVideo);
 
         function playVideo(){
             hz.play();
-            console.log('11111');
         }
 
         function pauseVideo(){

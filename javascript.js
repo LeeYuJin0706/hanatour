@@ -69,3 +69,15 @@ for(let i = 0; i < tapButton.length; i++){
         tapList[i].classList.add('active');
     })
 }
+
+const box = document.querySelector(".content-box");
+        
+for(let i = 0 ; i < box.childElementCount ; i ++){
+
+    box.children[i].addEventListener('mouseover',function(){
+        this.children[3].play();
+    })
+    box.children[i].addEventListener('mouseout',function(){
+        this.children[3].pause();
+    })
+}

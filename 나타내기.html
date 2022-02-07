@@ -259,6 +259,23 @@ body{
             </div>
             <div class="button"><a href="#">채용공고 보러가기</a></div>
         </div>
+
     </div>
+    <script>
+
+        const box = document.querySelector(".content-box");
+        
+        for(let i = 0 ; i < box.childElementCount ; i ++){
+
+            box.children[i].addEventListener('mouseover',function(){
+                this.children[3].play();
+            })
+            box.children[i].addEventListener('mouseout',function(){
+                this.children[3].pause();
+            })
+        }
+        
+
+    </script>
 </body>
 </html>
