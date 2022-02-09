@@ -47,40 +47,40 @@
         }
 
         header{
-            width: 100%;
-            height: 132px;
-            margin: 0 auto;
-        }
-
-        .header-inner{
             width: 1394px;
             height: 132px;
             margin: 0 auto;
         }
 
-        .header-inner span{
-            clip: rect(1px, 1px, 1px, 1px);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        
-        .header-inner .logo{
-            height: 132px;
-            font-size: 15px;
+        .header-inner{
+            width: 100%;
+            height: 100%;
             margin: 0 auto;
-            float: left;
         }
 
-        .header-inner .logo img{
+        .header-inner .logo{
+            width: 180px;
+            height: 36px;
+            font-size: 15px;
+            float: left;
+            position: relative;
             padding-top: 48px;
+        }
+
+        .header-inner .logo span{
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(-50%);
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
 
         .header-nav{
             float: left;
             margin: 0 auto;
             margin-left: 50px;
-            margin-right: 50px;
+            margin-right: 25px;
             height: 130px;
         }
 
@@ -117,21 +117,24 @@
         }
 
         .nav-icon{
-            float: left;
-            padding-top: 45px;
+            float: right;
         }
 
-        .nav-icon .language{
-            width: 40px;
-            height: 40px;
+        .nav-icon .icon-box{
             float: left;
-            padding-right: 34px;
+            margin-top: 45px;
+            cursor: pointer;
+            position: relative;
+            margin-left: 25px;
         }
 
-        .nav-icon .search{
-            width: 40px;
-            height: 40px;
-            float: left;
+        .nav-icon span{
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(-50%);
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
         }
 
     </style>
@@ -168,21 +171,22 @@
                 </li> 
             </ul>
             <div class="nav-icon">
-                <div class="language">
-                    <a href="#">
+                <div class="icon-box">
+                    <div class="iconbut language">
                         <img src="img/language.svg" alt="언어">
-                        <span>언어</span>
-                    </a>
-                    <ul class="lan-box">
+                    </div>
+                    <span>언어</span>
+                    <!-- <ul class="lan-box">
                         <li>한국어</li>
                         <li>English</li>
-                    </ul>
+                    </ul> -->
                 </div>
-                <div class="search">
-                    <a href="#">
+
+                <div class="icon-box">
+                    <div class="iconbut search">
                         <img src="img/search.svg" alt="검색">
-                        <span>검색</span>
-                    </a>
+                    </div>
+                    <span>검색</span>
                 </div>
             </div>
         </div>
